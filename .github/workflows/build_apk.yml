@@ -33,8 +33,9 @@ jobs:
       - name: Build Release APK
         run: flutter build apk --release
 
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: AMAS-Solar-Toolkit-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+          - name: Upload APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: AMAS-Solar-Toolkit-APK
+        path: build/app/outputs/flutter-apk/app-release.apk
+
